@@ -1,0 +1,13 @@
+_G.autoStep = true;
+while _G.autoStep == true do
+    wait()
+
+local args = {
+    [1] = {
+        ["Character"] = game:GetService("Players").LocalPlayer.Character,
+        ["CFrame"] = CFrame.new(-10534.7294921875, 117.28553771972656, -6170.06982421875) * CFrame.Angles(0, -0.6981055736541748, 0),
+        ["IsRunning"] = true
+    }
+}
+game:GetService("ReplicatedStorage").Knit.Services.CharacterService.RE.UpdateCharacterState:FireServer(unpack(args))
+end
